@@ -5,25 +5,27 @@
   <%# else %>
     <p> All <%= @flats.length %> flats</p>
   <%# end %>
-  <div class="cards">
-    <div class="card">
-      <% @flats.each do |flat| %>
-        <div class="flat-card-title">
-          <%= flat.name %>
-        </div>
-        <p><%= flat.address %></p>
-        <div class="flex">
-          <i>*</i>
-          <span><%= flat.number_of_guests %></span>
-        </div>
-        <div class="flex">
-          <i>$</i>
-          <%= flat.price_per_night %>
-        </div>
-        <div class="card-flat-action">
-          <%= link_to 'More infos', flat_path(flat) %>
-        </div>
-      <% end %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <% @flats.each do |flat| %>
+          <div class="flat-card-title">
+            <%= flat.name %>
+          </div>
+          <p><%= flat.address %></p>
+          <div class="flex">
+            <i>*</i>
+            <span><%= flat.number_of_guests %></span>
+          </div>
+          <div class="flex">
+            <i>$</i>
+            <%= flat.price_per_night %>
+          </div>
+          <div class="card-flat-action">
+            <%= link_to 'More infos', flat_path(flat) %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

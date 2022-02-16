@@ -5,11 +5,29 @@
         <h1><%=  @flat.name %></h1>
         <p><%=  @flat.address %></p>
       </div>
-    </div>
-    <div class="col-8">
       <div class="flat-show-card">
         <h3>A bit more about this flat...</h3>
         <p><%=  @flat.description %></p>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="flat-show-card">
+        <h1>Book it</h1>
+        <p>display dates ...</p>
+      </div>
+      <div class="flat-show-card">
+        <h3>Details</h3>
+        <p><%=  @flat.price_per_night %>$/night</p>
+        <p><%=  @flat.number_of_guests %> guests</p>
+      </div>
+      <div class="flat-show-card">
+        <h4>Share</h4>
+        <ul>
+          <li><i>@facebook</i></li>
+          <li><i class="fab fa-twitter fa-2x"></i></li>
+          <li><i>@pinterest</i></li>
+          <li><i>@mail</i></li>
+        </ul>
       </div>
     </div>
   </div>
