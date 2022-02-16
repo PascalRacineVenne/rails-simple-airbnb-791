@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>All our Flats</h1>
+  <%# if @flats.empty? %>
+
+  <%# else %>
+    <p> All <%= @flats.length %> flats</p>
+  <%# end %>
+  <div class="cards">
+    <div class="card">
+      <% @flats.each do |flat| %>
+        <div class="flat-card-title">
+          <%= flat.name %>
+        </div>
+        <p><%= flat.address %></p>
+        <div class="flex">
+          <i>*</i>
+          <span><%= flat.number_of_guests %></span>
+        </div>
+        <div class="flex">
+          <i>$</i>
+          <%= flat.price_per_night %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
