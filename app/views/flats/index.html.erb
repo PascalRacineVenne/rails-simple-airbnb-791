@@ -10,7 +10,7 @@
       <div class="card">
         <% @flats.each do |flat| %>
           <div class="flat-card-title">
-            <%= flat.name %>
+            <h2><%= link_to flat.name, flat_path(flat) %></h2>
           </div>
           <p><%= flat.address %></p>
           <div class="flex">
@@ -23,6 +23,14 @@
           </div>
           <div class="card-flat-action">
             <%= link_to 'More infos', flat_path(flat) %>
+            <%= link_to edit_flat_path(flat) do %>
+              <i class="fa-solid fa-pen-to-square"></i>
+            <% end %>
+            <%= link_to 'Remove', flat_path(flat),
+              method: :delete,
+              data: { confirm: 'Are you sure?' },
+              class: 'ms-3 text-danger'
+            %>
           </div>
         <% end %>
       </div>

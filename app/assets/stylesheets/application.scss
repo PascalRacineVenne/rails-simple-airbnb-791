@@ -25,7 +25,17 @@
 @import '@fortawesome/fontawesome-free/scss/v4-shims';
 @import 'flats.scss';
 
-// .flex {
-//   display: flex;
-//   border: 1px solid red;
-// }
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
