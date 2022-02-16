@@ -18,15 +18,18 @@
       <div class="flat-show-card">
         <h3>Details</h3>
         <p><%=  @flat.price_per_night %>$/night</p>
-        <p><%=  @flat.number_of_guests %> guests</p>
+        <div class="flex">
+        <i class="fa-solid fa-user-group"></i>
+        <span><%=  @flat.number_of_guests %></span>
+        </div>
       </div>
       <div class="flat-show-card">
         <h4>Share</h4>
         <ul>
-          <li><i>@facebook</i></li>
+          <li><i class="fa-brands fa-facebook-square"></i></li>
           <li><i class="fab fa-twitter fa-2x"></i></li>
-          <li><i>@pinterest</i></li>
-          <li><i>@mail</i></li>
+          <li><i class="fa-brands fa-pinterest-square"></i></li>
+          <li><i class="fa-solid fa-envelope"></i></li>
         </ul>
       </div>
     </div>

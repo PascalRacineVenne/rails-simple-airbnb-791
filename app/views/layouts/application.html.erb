@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <div class="nav">
+      <div class="container-fluid">
+        <%= link_to "Simple Air B'n'B", flats_path %>
+        <%= link_to 'ADD', new_flat_path, class: "btn btn-outline-primary my-2 my-sm-0 ms-2"  %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
